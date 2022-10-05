@@ -1,7 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg"
+import "./App.css"
+import axios from "axios"
 
 function App() {
+  const data = async () => {
+    const response = await axios.get("https://tropics-tripcord.nl")
+    console.log(response)
+  }
+  console.log(data())
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +25,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
