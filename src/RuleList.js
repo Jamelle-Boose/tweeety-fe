@@ -123,6 +123,7 @@ const RuleList = () => {
 
       try {
         const response = await axios.get(rulesURL)
+        console.log(response)
         const { data: payload = [] } = response.data.body
         dispatch({
           type: "show_rules",
