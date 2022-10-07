@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import RuleList from "./RuleList"
 
-// TODO #1 Add RuleList route
 function App() {
   return (
     <div className="ui container">
