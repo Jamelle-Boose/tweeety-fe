@@ -1,29 +1,31 @@
-import logo from "./logo.svg"
-import "./App.css"
-import axios from "axios"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import RuleList from "./RuleList"
 
+// TODO #1 Add RuleList route
 function App() {
-  const data = async () => {
-    const response = await axios.get("https://tropics-tripcord.nl")
-    console.log(response)
-  }
-  console.log(data())
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ui container">
+      <div className="introduction"></div>
+
+      <h1 className="ui header">
+        <img
+          className="ui image"
+          src="/Twitter_Logo_Blue.png"
+          alt="Twitter Logo"
+        />
+        <div className="content">
+          Real Time Tweet Streamer
+          <div className="sub header">Powered by Twitter data</div>
+        </div>
+      </h1>
+
+      <div className="ui container">
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<RuleList />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   )
 }
