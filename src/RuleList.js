@@ -39,7 +39,7 @@ const RuleList = () => {
   //  TwtterDev containing links`
   const operatorsURL =
     "https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/integrate/build-a-rule"
-  const rulesURL = "http://tropics-tripcord.nl/api/filteredstream/rules"
+  const rulesURL = "https://tropics-tripcord.nl/api/filteredstream/rules"
 
   const createRule = async e => {
     e.preventDefault()
