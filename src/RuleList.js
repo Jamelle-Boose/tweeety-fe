@@ -34,9 +34,9 @@ const reducer = (state, action) => {
 const RuleList = () => {
   const initialState = { rules: [], newRule: "", isLoading: false, errors: [] }
   const [state, dispatch] = useReducer(reducer, initialState)
-  const exampleRule = "from:twitterdev has:links"
-  const ruleMeaning = `This example rule will match Tweets posted by 
-     TwtterDev containing links`
+  // const exampleRule = "from:twitterdev has:links"
+  // const ruleMeaning = `This example rule will match Tweets posted by
+  //  TwtterDev containing links`
   const operatorsURL =
     "https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/integrate/build-a-rule"
   const rulesURL = "http://tropics-tripcord.nl/api/filteredstream/rules"
