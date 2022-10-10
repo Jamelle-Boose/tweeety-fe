@@ -48,10 +48,10 @@ const RuleList = () => {
     dispatch({ type: "change_loading_status", payload: true })
     try {
       const response = await axios.post(rulesURL, payload)
-      if (response.data.body.errors)
-        dispatch({ type: "add_errors", payload: response.data.body.errors })
+      if (response.data.errors)
+        dispatch({ type: "add_errors", payload: response.data.errors })
       else {
-        dispatch({ type: "add_rule", payload: response.data.body.data })
+        dispatch({ type: "add_rule", payload: response.data.data })
       }
       dispatch({ type: "change_loading_status", payload: false })
     } catch (e) {
