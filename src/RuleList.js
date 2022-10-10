@@ -120,8 +120,8 @@ const RuleList = () => {
   useEffect(() => {
     ;(async () => {
       dispatch({ type: "change_loading_status", payload: true })
-
       try {
+        const rulesURL = process.env.REACT_APP_RULESURL
         const response = await axios.get(rulesURL)
         const { data: payload = [] } = response.data
         dispatch({
