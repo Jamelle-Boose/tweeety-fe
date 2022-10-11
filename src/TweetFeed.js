@@ -37,7 +37,7 @@ const TweetFeed = () => {
   const streamTweets = () => {
     // let socket;
     const source = new EventSource(
-      "https:/tweeety.netlify.app/api/filteredstream"
+      "https://tropics-tripcord.nl/api/filteredstream"
     )
     source.onmessage = e => {
       console.log(e)
