@@ -22,6 +22,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<RuleList />} />
+            <Route exact path="/rules" element={<RuleList />} />
           </Routes>
         </BrowserRouter>
       </div>
