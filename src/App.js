@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import RuleList from "./RuleList"
 import Navbar from "./Navbar"
+import TweetFeed from "./TweetFeed"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<RuleList />} />
             <Route exact path="/rules" element={<RuleList />} />
+            <Route exact path="/tweets" element={<TweetFeed />} />
           </Routes>
         </BrowserRouter>
       </div>
