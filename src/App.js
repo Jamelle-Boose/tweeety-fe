@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import RuleList from "./RuleList"
+import Navbar from "./Navbar"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
 
       <div className="ui container">
         <BrowserRouter>
+          <Navbar />
           <Routes>
             <Route exact path="/" element={<RuleList />} />
             <Route exact path="/rules" element={<RuleList />} />
